@@ -1,0 +1,352 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding-top: 56px; /* Ajustar según la altura de la navbar */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  /* src/index.css */
+body {
+  padding-top: 56px; /* Ajustar según la altura de la navbar */
+}
+
+}
+/* Estilos para el componente Cart */
+.cart-container {
+  padding: 20px;
+  margin-top: 60px; /* Ajusta según el tamaño del Navbar */
+}
+
+.cart {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.cart-header h2 {
+  margin: 0;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-item-img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilos para el Navbar fijo en la parte superior */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Asegura que el contenido no se superponga debajo del Navbar */
+.main-content {
+  padding-top: 60px; /* Ajusta según el tamaño del Navbar */
+}
+/* Estilos para el Navbar fijo en la parte superior */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff; /* Color de fondo del Navbar */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  padding: 15px 0; /* Espaciado interior vertical */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Tamaño de fuente del logo */
+  font-weight: bold; /* Peso de fuente */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Alineación a la derecha */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 15px; /* Espaciado entre elementos del menú */
+}
+
+.navbar-nav .nav-link {
+  color: #333333; /* Color del texto del enlace */
+  font-weight: bold; /* Peso de fuente */
+  transition: color 0.3s; /* Transición suave del color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Color del texto del enlace al pasar el mouse */
+}
+/* Estilos para el componente Cart */
+.cart-container {
+  padding: 20px;
+  margin-top: 60px; /* Ajusta según el tamaño del Navbar */
+}
+
+.cart {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.cart-header h2 {
+  margin: 0;
+}
+
+.cart-items {
+  margin-top: 20px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Grid de 4 columnas */
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-item-img {
+  width: 100%;
+  max-width: 100%; /* Imágenes ocupan el ancho del contenedor */
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilos para el Navbar fijo en la parte superior */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Estilos para el componente Cart */
+.cart-container {
+  padding: 20px;
+  margin-top: 60px; /* Ajusta según el tamaño del Navbar */
+}
+
+.cart {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.cart-header h2 {
+  margin: 0;
+}
+
+.cart-items {
+  margin-top: 20px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* Grid de 8 columnas */
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-item-img {
+  width: 100%;
+  max-width: 100%; /* Imágenes ocupan el ancho del contenedor */
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilos para el Navbar fijo en la parte superior */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+/* src/index.css */
+body {
+  padding-top: 70px; /* Para dejar espacio al navbar fijo */
+}
+
