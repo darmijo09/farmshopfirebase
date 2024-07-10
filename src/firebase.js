@@ -1,4 +1,3 @@
-// src/firebase.js
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
@@ -15,4 +14,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-export const firestore = firebase.firestore();
+const firestore = firebase.firestore();
+
+export const productosCollection = firestore.collection('productos');
+
+export default firebase;

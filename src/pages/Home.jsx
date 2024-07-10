@@ -1,10 +1,10 @@
 import React from 'react';
+import ItemListContainer from './ItemListContainer';
 
 function Home() {
   return (
-    <div className="container mt-5">
-      <h2>Bienvenido a Animal Feed</h2>
-      <p>Descubre nuestra selección de productos para cerdos y aves.</p>
+    <div>
+      <ItemListContainer />
     </div>
   );
 }
